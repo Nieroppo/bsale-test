@@ -7,7 +7,7 @@ en ambos casos agrupados según su categoría. Mientras el backend interactúa c
 
 El backend esta construido a partir de NodeJs, express ,y MySQL; y se encuentra desplegado en heroku<br>
 ##### Link: [https://vp-bsale-test-api.herokuapp.com/api/](https://vp-bsale-test-api.herokuapp.com/api/)
-##### Documentación de la API en postman [Link aquí](https://documenter.getpostman.com/view/18405971/UVsEWpoH)
+##### Documentación de la API en postman <a href="https://documenter.getpostman.com/view/18405971/UVsEWpoH" target="_blank">Link aquí</a>
 
 #### Organización de los archivos
 
