@@ -11,5 +11,8 @@ mysqlConnection.connect((err) =>{
     console.log('Database is connected');
     app.listen( app.get('port'),()=>{
         console.log('listening on port', app.get('port'));
+        setInterval(function () {
+            mysqlConnection.query('SELECT 1');
+        }, 2000);
     })
-})
+});
