@@ -58,10 +58,10 @@ El frontend es una Single Page Application que esta contruido a partir de HTML, 
 Muestra los primeros diez productos del la base de datos agrupados según su categoría, y carga productos a medida que se baja dentro de la página. <br>
 Imagen de muestra:
 
-![image text](https://github.com/Nieroppo/bsale-test/blob/main/inicio.png)
+
 
 ##### Path  ```#/search?search= ``` 
 Muestra los primeros diez productos realacionados con la busqueda según su categoría, y carga productos a medida que se baja dentro de la página. <br>
 Imagen de muestra:
-![image text](https://github.com/Nieroppo/bsale-test/blob/main/busqueda.png)
+
 
