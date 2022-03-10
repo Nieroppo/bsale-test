@@ -27,6 +27,10 @@ export async function InfiniteScroll(){
                 apiURL=`${api.PRODUCTS}${api.page}`
             }else if(hash.includes('#/search')){
                 apiURL=`${api.SEARCH}${query}/page/${api.page}`
+            }else if(hash.includes('#/category')){
+                let categoryId = hash.split('/')[2];
+                apiURL=`${api.PRODUCTSBYCATEGORIES}${categoryId}/page/${api.page}`;
+            
             }
             
             await ajax({

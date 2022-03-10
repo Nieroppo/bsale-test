@@ -1,12 +1,16 @@
 import api from '../helpers/api.js';
+import { Dropdown } from './Dropdown.js';
 
 export function Title(){
-    const $h1 = document.createElement('div');
-    $h1.classList.add('orange');
-    $h1.classList.add('logo')    
-    $h1.innerHTML=`
+    const $right = document.createElement('div'), $logo = document.createElement('div');
+    $logo.classList.add('orange');
+    $logo.classList.add('logo');
+    $right.classList.add('header-right');   
+    $right.appendChild($logo);
+    $right.appendChild(Dropdown());
+    $logo.innerHTML=`
         <a href="#/">${api.TITLE}</a>
         
     `
-    return $h1;
+    return $right;
 }

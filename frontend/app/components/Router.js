@@ -52,6 +52,21 @@ export async function Router(){
     
             }
         })
+    }else if(hash.includes('#/category')){
+        let categoryId = hash.split('/')[2];
+        
+        const query =api.PRODUCTSBYCATEGORIES+categoryId+'/page';
+        await ajax({
+            url: query,
+            cbSuccess: (products) => {
+                console.log(products);
+                let html ="";
+                products.rows.forEach((product) => html +=ProductCard(product));
+                
+                $products.innerHTML= html;
+    
+            }
+        })
     }
 
     d.querySelector(".loader").style.display="none";
