@@ -15,4 +15,4 @@ mysqlConnection.connect((err) =>{
             mysqlConnection.query('SELECT 1');
         }, 2000);
     })
-});
+})

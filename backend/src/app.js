@@ -8,7 +8,7 @@ const config = require('./config');
 const app = express();
 
 const productsRoutes = require('./routes/product.routes');
-
+const categoriesRoutes = require('./routes/category.routes');
 //CORS
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -27,6 +27,6 @@ app.set('port', config.PORT);
 
 //Routes
 app.use('/api/products', productsRoutes);
-
+app.use('/api/categories', categoriesRoutes);
 
 module.exports = app;

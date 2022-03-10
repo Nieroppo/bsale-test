@@ -21,6 +21,24 @@ const controller ={
             return res.status(200).send({rows});
         })
     },
+    getByCategory: function(req, res){
+        let  page = 0;
+        if(req.params.page) page = req.params.page -1;
+        
+        if(page < 0) page = 0;
+        
+        const lowerLimit = page*10;
+        const category = req.params.category;
+        const limit = lowerLimit+','+10;
+        const query = 'SELECT p.id, p.name, p.url_image, p.category, p.price, p.discount FROM product p, category c WHERE c.id = ? AND p.category = c.id  LIMIT '+ limit;
+        
+        mysqlConnection.query(query,[category],(err, rows, fields)=>{
+            
+            if(err) return res.status(500).send({message: err});
+            if(rows.length === 0) return res.status(404).send({message:'Products not found'});
+            return res.status(200).send({rows});
+        })
+    },
     Search: function(req, res){
 
         let  page = 0;
