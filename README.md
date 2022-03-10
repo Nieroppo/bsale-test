@@ -14,8 +14,10 @@ El backend esta construido a partir de NodeJs, express ,y MySQL; y se encuentra 
 ```
     ├── src
     │   ├── controllers
+    │   │   ├── category.controller.js
     │   │   └── product.controller.js
     │   ├── routes
+    │   │   ├── category.routes.js
     │   │   └── product.routes.js
     │   ├── app.js
     │   ├── config.js
@@ -38,6 +40,9 @@ El frontend es una Single Page Application que esta contruido a partir de HTML, 
     │   │   ├── loader.svg
     │   │   └── style.css
     │   ├── components
+    │   │   ├── Dropdown.js
+    │   │   ├── DropdownMenu.js
+    │   │   ├── DropdownContent.js
     │   │   ├── Header.js
     │   │   ├── Loader.js
     │   │   ├── ProductCard.js
@@ -53,15 +58,20 @@ El frontend es una Single Page Application que esta contruido a partir de HTML, 
     │   └── index.js
     └── index.html
 ```
-### Uso 
-##### Path  ```/ ``` ó ```#/ ```
+
+## Rutas
+
+##### Ruta  ```/ ``` ó ```#/ ```
 Muestra los primeros diez productos del la base de datos agrupados según su categoría, y carga productos a medida que se baja dentro de la página. <br>
 Imagen de muestra:
+![image_text](https://github.com/Nieroppo/bsale-test/blob/main/inicio.png)
 
 
-
-##### Path  ```#/search?search= ``` 
-Muestra los primeros diez productos realacionados con la busqueda según su categoría, y carga productos a medida que se baja dentro de la página. <br>
+##### Ruta  ```#/search?search= ``` 
+Muestra los primeros diez productos realacionados con la busqueda, y carga productos a medida que se baja dentro de la página. <br>
 Imagen de muestra:
-
-
+![image_text](https://github.com/Nieroppo/bsale-test/blob/main/busqueda.png)
+##### Ruta  ```#/categorty/{id}``` 
+Muestra los primeros diez productos según el id de la categoría, y carga productos a medida que se baja dentro de la página. <br>
+Imagen de muestra:
+![image_text](https://github.com/Nieroppo/bsale-test/blob/main/categoria.png)
